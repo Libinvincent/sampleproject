@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { View, Text, Image, StyleSheet, FlatList, TouchableOpacity } from "react-native";
-import { Technologys,Maincontent } from "./src/Datas";
+import { Technologys,Maincontent } from "./Datas";
+
 
 
 const Iconslist = () => {
@@ -35,7 +36,7 @@ const renderItem = ({ item }) => {
 
 
 
-export default function App() {
+export default function TechnologyPage() {
 
   const [Data, setData] = useState("")
 
@@ -84,13 +85,13 @@ const Styles = StyleSheet.create({
   subcontainer1: {
     height: '20%',
     width: '100%',
-    backgroundColor: "white",
+    backgroundColor: "#ffffff",
 
   },
   subcontainer2: {
     height: '10%',
     width: '100%',
-    backgroundColor: "white",
+    backgroundColor: "#ffffff",
     alignItems: 'center',
     justifyContent: "center"
   },
@@ -98,13 +99,13 @@ const Styles = StyleSheet.create({
   subcontainer3: {
     height: '70%',
     width: '100%',
-    backgroundColor: "white"
+    backgroundColor: "#ffffff"
   },
   headingText:
   {
     fontSize: 25,
     fontWeight: 'bold',
-    color: 'black',
+    color: '#000000',
     margin: 2,
     marginLeft: 20,
     marginTop: 5
@@ -124,13 +125,13 @@ const Styles = StyleSheet.create({
     height: '50%',
     width: '70%',
     borderRadius: 50,
-    backgroundColor: 'white',
+    backgroundColor: '#ffffff',
     alignItems: "center",
     justifyContent: 'center',
     marginLeft: 10,
     marginTop: 5,
     borderWidth: 1,
-    borderColor: 'black'
+    borderColor: '#000000'
   },
   backgroundicon: {
     height: '70%',
@@ -144,7 +145,7 @@ const Styles = StyleSheet.create({
     width: '100%',
     height: '70%',
     flexDirection: 'row',
-    backgroundColor: 'white'
+    backgroundColor: '#ffffff'
   },
 
   contentlist: {
@@ -153,7 +154,7 @@ const Styles = StyleSheet.create({
     margin: 8,
     flexDirection: 'row',
     alignItems: "center",
-    backgroundColor: 'white',
+    backgroundColor: '#ffffff',
     borderRadius: 10,
     borderWidth: .5,
     borderColor: 'gray'
@@ -163,13 +164,13 @@ const Styles = StyleSheet.create({
     width: '75%',
     flexDirection: 'row',
     alignItems: "center",
-    backgroundColor: 'white',
+    backgroundColor: '#ffffff',
     padding: 10,
     borderTopLeftRadius: 10,
     borderBottomStartRadius: 10
   },
   contentText: {
-    color: "black",
+    color: "#000000",
     fontSize: 12
   },
   contentImageview: {
@@ -177,7 +178,7 @@ const Styles = StyleSheet.create({
     width: '25%',
     flexDirection: 'row',
     alignItems: "center",
-    backgroundColor: 'white',
+    backgroundColor: '#ffffff',
     justifyContent: "flex-end",
     borderBottomRightRadius: 10,
     borderTopRightRadius: 10
@@ -193,7 +194,7 @@ const Styles = StyleSheet.create({
   displayText: {
     height: '70%',
     width: '95%',
-    backgroundColor: "white",
+    backgroundColor: "#ffffff",
     alignItems: 'center',
     justifyContent: "center",
     borderRadius: 25,

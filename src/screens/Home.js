@@ -1,11 +1,11 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, TouchableHighlight } from "react-native";
 
-export default function App() {
+export default function HomePage({navigation}) {
     return (
         <View style={Styles.container}>
             <View style={Styles.subcontainer1}>
-                <Image source={require("./images/Home.jpg")} style={Styles.homeimage} />
+                <Image source={require("../../images/Home.jpg")} style={Styles.homeimage} />
             </View>
 
             <View style={Styles.subcontainer2}>
@@ -19,7 +19,7 @@ export default function App() {
             </View>
             <View style={Styles.subcontainer3}>
                 <View style={Styles.subcontainer4}>
-                    <TouchableHighlight style={Styles.buttonview}>
+                    <TouchableHighlight style={Styles.buttonview} onPress={()=>navigation.navigate("bottom")} underlayColor={'white'}>
                         <Text style={Styles.buttontext}>Get started</Text>
                     </TouchableHighlight>
                     <Text>2020 woxro Technology Solutions Pvt. Ltd.</Text>
@@ -39,21 +39,21 @@ const Styles = StyleSheet.create({
     subcontainer1: {
         height: '40%',
         width: '100%',
-        backgroundColor: "white",
+        backgroundColor: "#ffffff",
         alignItems: 'center',
         justifyContent: "center"
     },
     subcontainer2: {
         height: '40%',
         width: '100%',
-        backgroundColor: "white",
+        backgroundColor: "#ffffff",
         alignItems: 'center',
         justifyContent: "center"
     },
     subcontainer3: {
         height: '20%',
         width: '100%',
-        backgroundColor: "white"
+        backgroundColor: "#ffffff"
     },
     subcontainer4: {
         alignItems: 'center',
@@ -68,13 +68,13 @@ const Styles = StyleSheet.create({
     welcometext: {
         fontSize: 40,
         fontWeight: 'bold',
-        color: 'black',
+        color: '#000000',
         marginBottom: 10
 
     },
     contenttext: {
         fontSize: 17,
-        color: 'black',
+        color: '#000000',
         fontWeight: 'normal',
         margin: 1,
     },
@@ -82,7 +82,7 @@ const Styles = StyleSheet.create({
         height: '25%',
         width: '80%',
         borderWidth: 1,
-        borderColor: 'black',
+        borderColor: '#000000',
         alignItems: 'center',
         justifyContent: 'center',
         marginBottom: 70
@@ -90,7 +90,7 @@ const Styles = StyleSheet.create({
     },
     buttontext: {
         fontSize: 20,
-        color: 'black'
+        color: '#000000'
     }
 
 })

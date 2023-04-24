@@ -1,62 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, FlatList } from "react-native";
-
-const IconName = [
-  {
-
-    image: require("./images/coupon.png"),
-    text: "Coupon"
-  },
-  {
-
-    image: require("./images/ads.png"),
-    text: "   Ads"
-  },
-  {
-
-    image: require("./images/quatation.png"),
-    text: "Quatation"
-  },
-  {
-
-    image: require("./images/brochure.png"),
-    text: "Brochure"
-  }
-]
-
-const content = [
-  {
-    icon: require("./images/about.png"),
-    heading: "About Us",
-    contents: "All kind of IT services that vow your success"
-  },
-  {
-    icon: require("./images/service.jpg"),
-    heading: "Service",
-    contents: "We provide truly prominent IT solutions"
-  },
-  {
-    icon: require("./images/mangement.jpg"),
-    heading: "Management",
-    contents: "Know more about our management"
-  },
-
-  {
-    icon: require("./images/technology.jpg"),
-    heading: "Technology",
-    contents: "Discover our range of Tecnologies"
-  },
-  {
-    icon: require("./images/contact.jpg"),
-    heading: "Contact Us",
-    contents: "Get in touch with us for more information"
-  },
-  {
-    icon: require("./images/hosting.png"),
-    heading: "Hosting",
-    contents: "Hosting with powerful Linux platform"
-  },
-]
+import { IconName, content } from "./Datas";
 
 
 function TopView() {
@@ -69,7 +13,7 @@ function TopView() {
           <Image source={item.image} style={Styles.iconImage} />
         </View>
         <View>
-          <Text style={{ color: 'black' }}>{item.text}</Text>
+          <Text style={{ color: '#000000' }}>{item.text}</Text>
         </View>
       </View>
     )
@@ -88,7 +32,7 @@ const renderitem = ({ item }) => {
 
 }
 
-export default function App() {
+export default function WelcomeScreen() {
   return (
     <View style={Styles.container}>
       <View style={Styles.subcontainer1}>
@@ -98,11 +42,11 @@ export default function App() {
         <View style={Styles.contentview}>
           <TopView />
         </View>
-       
+
       </View>
       <View style={Styles.subcontainer2}>
         <FlatList data={content} renderItem={renderitem} numColumns={2}
-          style={Styles.mainlist}/>
+          style={Styles.mainlist} />
 
       </View>
 
@@ -120,20 +64,20 @@ const Styles = StyleSheet.create({
   subcontainer1: {
     height: '20%',
     width: '100%',
-    backgroundColor: "white",
+    backgroundColor: "#ffffff",
 
   },
   subcontainer2: {
     height: '80%',
     width: '100%',
-    backgroundColor: "white",
+    backgroundColor: "#ffffff",
     alignItems: 'center',
     justifyContent: "center"
   },
   subcontainer3: {
     height: '20%',
     width: '100%',
-    backgroundColor: "white"
+    backgroundColor: "#ffffff"
   },
   subcontainer4: {
     alignItems: 'center',
@@ -143,7 +87,7 @@ const Styles = StyleSheet.create({
   headertext: {
     fontSize: 30,
     fontWeight: 'bold',
-    color: 'black',
+    color: '#000000',
     marginBottom: 5,
     margin: 10
 
@@ -162,12 +106,12 @@ const Styles = StyleSheet.create({
     height: '50%',
     width: '50%',
     borderRadius: 100,
-    backgroundColor: 'white',
+    backgroundColor: '#ffffff',
     alignItems: "center",
     justifyContent: 'center',
     marginBottom: 10,
     borderWidth: .5,
-    borderColor: 'black'
+    borderColor: '#000000'
   },
   iconImage: {
     height: '60%',
@@ -197,7 +141,7 @@ const Styles = StyleSheet.create({
   },
   listHeading: {
     fontSize: 20,
-    color: 'black',
+    color: '#000000',
     margin: 2,
     marginLeft: 5
   },
